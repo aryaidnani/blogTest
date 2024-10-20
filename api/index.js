@@ -4,7 +4,9 @@ require("dotenv").config();
 const { blogModel } = require("./db");
 const app = express();
 
-mongoose.connect(process.env.MONGODB_KEY);
+const key = process.env.MONGODB_KEY;
+
+mongoose.connect(key, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get("/", async (req, res) => {
   console.log(`running 1`);

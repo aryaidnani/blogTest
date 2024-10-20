@@ -8,7 +8,7 @@ const key = process.env.MONGODB_KEY;
 
 mongoose.connect(key, { useNewUrlParser: true, useUnifiedTopology: true });
 
-app.get("/api", async (req, res) => {
+app.get("/meh", async (req, res) => {
   console.log(`running 1`);
   const allBlogs = await blogModel.find();
   console.log(`running 2`);

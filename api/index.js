@@ -12,7 +12,7 @@ app.get("/api/mhmm/meh", async (req, res) => {
   console.log(`running 1`);
   const allBlogs = await blogModel.find();
   console.log(`running 2`);
-  res.send(allBlogs);
+  res.json(allBlogs);
 });
 
 // app.listen(3000, () => console.log("Server ready on port 3000."));
